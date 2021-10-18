@@ -4,4 +4,212 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
+header {
+  padding: 1.25em;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav .left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .left .logo {
+  padding: 0 0 0.2em 1em;
+}
+
+header nav .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header nav .right .shoppingCart {
+  padding: 0 1em 0 0;
+}
+
+header nav .right .profile img {
+  width: auto;
+  height: 2em;
+}
+
+section .descriptionContainer {
+  padding: 1.25em;
+}
+
+section .descriptionContainer .description h1 {
+  text-transform: uppercase;
+  color: #ff7d1a;
+  font-size: 1em;
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+}
+
+section .descriptionContainer .description h2 {
+  font-size: 2em;
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+  color: black;
+}
+
+section .descriptionContainer .description p {
+  font-family: "Kumbh Sans";
+  color: #68707d;
+}
+
+section .priceContainer {
+  margin: 1em 0 0 0;
+}
+
+section .priceContainer .cost {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .priceContainer .cost .discount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .priceContainer .cost .discount h1 {
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+}
+
+section .priceContainer .cost .discount h2 {
+  background-color: #ffede0;
+  padding: 0.25em;
+  font-size: 1.25em;
+  margin: 0 0 0.25em 0.5em;
+  color: #ff7d1a;
+  border-radius: 0.25em;
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+}
+
+section .priceContainer .cost .remaining {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .priceContainer .cost .remaining h1 {
+  font-size: 1.25em;
+  color: #b6bcc8;
+  text-decoration: line-through;
+}
+
+section .buttonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1em 0 0 0;
+  padding: 0.5em;
+  background-color: #f7f8fd;
+  border-radius: 0.5em;
+}
+
+section .buttonContainer .minus {
+  background-color: transparent;
+  border: none;
+  margin: 0 35% 0 0;
+}
+
+section .buttonContainer span {
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+section .buttonContainer .plus {
+  background-color: transparent;
+  border: none;
+  margin: 0 0 0 35%;
+}
+
+section .addToCartContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 1em 0 3em 0;
+}
+
+section .addToCartContainer .addToCart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  padding: 1em;
+  background-color: #ff7d1a;
+  border: none;
+  border-radius: 0.25em;
+  -webkit-box-shadow: 0px 10px 30px 2px rgba(255, 176, 176, 0.5);
+          box-shadow: 0px 10px 30px 2px rgba(255, 176, 176, 0.5);
+}
+
+section .addToCartContainer .addToCart img {
+  padding: 0 1em 0 0;
+  -webkit-filter: brightness(2000%);
+          filter: brightness(2000%);
+}
+
+section .addToCartContainer .addToCart p {
+  margin: 0.1em 0 0 0;
+  color: white;
+  font-family: "Kumbh Sans";
+  font-size: 1em;
+  font-weight: 700;
+}
 /*# sourceMappingURL=main.css.map */
