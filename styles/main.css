@@ -39,6 +39,10 @@ header nav .left {
           align-items: center;
 }
 
+header nav .left .hamburgerMenu {
+  cursor: pointer;
+}
+
 header nav .left .logo {
   padding: 0 0 0.2em 1em;
 }
@@ -98,6 +102,10 @@ header nav .right {
 
 header nav .right .shoppingCart {
   padding: 0 1em 0 0;
+}
+
+header nav .right .profile {
+  cursor: pointer;
 }
 
 header nav .right .profile img {
@@ -266,11 +274,12 @@ section .addToCartContainer .addToCart p {
   position: absolute;
   content: '';
   width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   background-color: black;
   opacity: 0;
   top: 0;
-  z-index: -1;
+  z-index: -2;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }

@@ -24,6 +24,10 @@ header {
             display: flex;
             align-items: center;
 
+            .hamburgerMenu {
+                cursor: pointer;
+            }
+
             .logo {
                 padding: 0 0 0.2em 1em;
             }
@@ -79,6 +83,7 @@ header {
             }
 
             .profile {
+                cursor: pointer;
 
                 img {
                     width: auto;
@@ -226,11 +231,12 @@ section {
     position: absolute;
     content: '';
     width:100vw;
-    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
     background-color: $black;
     opacity: 0;
     top:0;
-    z-index: -1;
+    z-index: -2;
     transition: 0.5s all;
 }
 
