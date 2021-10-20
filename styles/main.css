@@ -6,7 +6,7 @@
 }
 
 body.active {
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 header {
