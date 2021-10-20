@@ -24,3 +24,27 @@ backdrop.addEventListener('click', function(){
     body.classList.remove('active');
 });
 
+
+// quantity of shoes
+const plus = document.querySelector('button.plus');
+const minus = document.querySelector('button.minus');
+const value = document.querySelector('span.value');
+
+let number = 1;
+
+function shoeCount() {
+    plus.addEventListener('click', function(){
+        console.log('clicked');
+        value.innerText = +value.innerText + number;
+    });
+
+    minus.addEventListener('click', function(){
+        if (+value.innerText  > 0) {
+            value.innerText = +value.innerText - number;
+        } else {        
+            value.innerText = 0;
+        }
+    })
+}
+
+shoeCount();
