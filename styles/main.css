@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body.active {
+  overflow-y: hidden;
+}
+
 header {
   padding: 1.25em;
 }
