@@ -38,6 +38,50 @@ header nav .left .logo {
   padding: 0 0 0.2em 1em;
 }
 
+header nav .links {
+  position: absolute;
+  background-color: white;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  padding: 0 6em 0 0;
+  z-index: 2;
+  -webkit-transform: translateX(-250px);
+          transform: translateX(-250px);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+header nav .links .exit {
+  padding: 2em 0 2em 2em;
+}
+
+header nav .links .exit img {
+  cursor: pointer;
+}
+
+header nav .links ul {
+  list-style: none;
+}
+
+header nav .links ul li {
+  padding: 0.75em 0;
+}
+
+header nav .links ul li a {
+  text-decoration: none;
+  color: black;
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+}
+
+header nav .links.active {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
 header nav .right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -211,5 +255,31 @@ section .addToCartContainer .addToCart p {
   font-family: "Kumbh Sans";
   font-size: 1em;
   font-weight: 700;
+}
+
+.backdrop {
+  position: absolute;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0;
+  top: 0;
+  z-index: -1;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.backdrop.active {
+  position: absolute;
+  content: '';
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+  top: 0;
+  z-index: 1;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 /*# sourceMappingURL=main.css.map */
