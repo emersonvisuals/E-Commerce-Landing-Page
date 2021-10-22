@@ -102,6 +102,8 @@ header nav .right {
 
 header nav .right .shoppingCart {
   padding: 0 1em 0 0;
+  z-index: 3;
+  cursor: pointer;
 }
 
 header nav .right .profile {
@@ -111,6 +113,132 @@ header nav .right .profile {
 header nav .right .profile img {
   width: auto;
   height: 2em;
+}
+
+section .cartContainer {
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  -webkit-transform: translateY(-400px);
+          transform: translateY(-400px);
+  opacity: 0;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+section .cartContainer .cartWrapper {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 3% 5%;
+  border-radius: 1em;
+  -webkit-box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.15);
+}
+
+section .cartContainer .cartWrapper .cartHeading {
+  border-bottom: 1px solid #b6bcc8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5em;
+}
+
+section .cartContainer .cartWrapper .cartHeading h1 {
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+section .cartContainer .cartWrapper .cartItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 1.5em;
+}
+
+section .cartContainer .cartWrapper .cartItem .cartImage img {
+  height: auto;
+  width: 4em;
+}
+
+section .cartContainer .cartWrapper .cartItem .cartDetails h1 {
+  font-family: "Kumbh Sans";
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0;
+  padding: 0 0 0.25em 0;
+  color: #b6bcc8;
+}
+
+section .cartContainer .cartWrapper .cartItem .cartDetails h2 {
+  font-family: "Kumbh Sans";
+  font-weight: 400;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  color: #b6bcc8;
+}
+
+section .cartContainer .cartWrapper .cartItem .cartDetails span.cartCost {
+  color: black;
+  font-weight: 700;
+}
+
+section .cartContainer .cartButtonContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 0 2em 0;
+}
+
+section .cartContainer .cartButtonContainer button.cartButton {
+  width: 85%;
+  background-color: #ff7d1a;
+  color: white;
+  border: none;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+section .cartContainer.active {
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 
 section .descriptionContainer {
@@ -209,7 +337,8 @@ section .buttonContainer {
 section .buttonContainer .minus {
   background-color: transparent;
   border: none;
-  margin: 0 35% 0 0;
+  margin: 0 50% 0 0;
+  position: absolute;
 }
 
 section .buttonContainer span {
@@ -221,7 +350,8 @@ section .buttonContainer span {
 section .buttonContainer .plus {
   background-color: transparent;
   border: none;
-  margin: 0 0 0 35%;
+  margin: 0 0 0 50%;
+  position: absolute;
 }
 
 section .addToCartContainer {
@@ -271,25 +401,41 @@ section .addToCartContainer .addToCart p {
 }
 
 .backdrop {
+  visibility: hidden;
   position: absolute;
   content: '';
-  width: 100vw;
-  max-height: 100vh;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  background-color: black;
+  background-color: transparent;
   opacity: 0;
   top: 0;
-  z-index: -2;
+  z-index: 2;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
 }
 
 .backdrop.active {
+  visibility: visible;
   position: absolute;
   content: '';
   width: 100vw;
-  height: 100vh;
+  max-height: 100vh;
   background-color: black;
+  opacity: 0.5;
+  top: 0;
+  z-index: 1;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.backdrop.shoppingCart {
+  visibility: visible;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
   opacity: 0.5;
   top: 0;
   z-index: 1;

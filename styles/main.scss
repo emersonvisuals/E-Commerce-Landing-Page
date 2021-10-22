@@ -80,6 +80,8 @@ header {
 
             .shoppingCart {
                 padding: 0 1em 0 0;
+                z-index: 3;
+                cursor: pointer;
             }
 
             .profile {
@@ -96,11 +98,112 @@ header {
 
 section {
 
+    .cartContainer {
+        position: absolute;
+        z-index: 2;
+        width: 100vw;
+        transform: translateY(-400px);
+        opacity: 0;
+        transition: 0.5s all;
+
+        .cartWrapper {
+            background-color: $white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 3% 5%;
+            border-radius: 1em;
+            box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.15);
+
+            .cartHeading {
+                border-bottom: 1px solid $grayishBlue;
+                display: flex;
+                align-items: center;
+                padding:1.5em;
+
+                h1 {
+                    font-family: $fontFamily;
+                    font-weight: 700;
+                    font-size: 1em;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+
+            .cartItem {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                padding: 1.5em;
+                
+                .cartImage {
+
+                    img {
+                        height: auto;
+                        width: 4em;
+                    }
+                }
+
+                .cartDetails {
+
+                    h1 {
+                        font-family: $fontFamily;
+                        font-weight: 400;
+                        font-size: 1em;
+                        margin: 0;
+                        padding: 0 0 0.25em 0;
+                        color: $grayishBlue;
+                    }
+
+                    h2 {
+                        font-family: $fontFamily;
+                        font-weight: 400;
+                        font-size: 1em;
+                        margin: 0;
+                        padding: 0;
+                        color: $grayishBlue;
+                    }
+
+                    span.cartCost {
+                        color: $black;
+                        font-weight: 700;
+                    }
+                    
+                }
+            }
+        }
+
+        .cartButtonContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 0 2em 0;
+
+            button.cartButton {
+                width: 85%;
+                background-color: $orange;
+                color: $white;
+                border: none;
+                padding: 1em;
+                border-radius: 1em;
+            }
+        }
+    }
+
+    .cartContainer.active {
+        position: absolute;
+        z-index: 2;
+        width: 100vw;
+        transform: translateY(0px);
+        opacity: 1;
+        transition: 0.5s all;
+    }
+
     .descriptionContainer {
         padding: 1.25em;
 
         .description {
-            
             
             h1 {
                 text-transform: uppercase;
@@ -177,7 +280,8 @@ section {
         .minus {
             background-color: transparent;
             border: none;
-            margin: 0 35% 0 0;
+            margin: 0 50% 0 0;
+            position: absolute;
         }
 
         span {
@@ -189,7 +293,9 @@ section {
         .plus {
             background-color: transparent;
             border: none;
-            margin: 0 0 0 35%;
+            margin: 0 0 0 50%;
+            position: absolute;
+            
         }
     }
 
@@ -228,24 +334,39 @@ section {
 }
 
 .backdrop {
+    visibility: hidden;
     position: absolute;
     content: '';
-    width:100vw;
-    max-height: 100vh;
+    width:100%;
+    height: 100%;
     overflow: hidden;
-    background-color: $black;
+    background-color: transparent;
     opacity: 0;
     top:0;
-    z-index: -2;
+    z-index: 2;
     transition: 0.5s all;
 }
 
 .backdrop.active {
+    visibility: visible;
     position: absolute;
     content: '';
     width:100vw;
-    height: 100vh;
+    max-height: 100vh;
     background-color: $black;
+    opacity: 0.5;
+    top:0;
+    z-index: 1;
+    transition: 0.5s all;
+}
+
+.backdrop.shoppingCart {
+    visibility: visible;
+    position: absolute;
+    content: '';
+    width:100%;
+    height: 100%;
+    background-color: transparent;
     opacity: 0.5;
     top:0;
     z-index: 1;
