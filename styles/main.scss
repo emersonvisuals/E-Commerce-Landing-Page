@@ -278,10 +278,10 @@ section {
         border-radius:0.5em;
 
         .minus {
+            position: absolute;
             background-color: transparent;
             border: none;
-            margin: 0 50% 0 0;
-            position: absolute;
+            margin: 0 10em 0 0;
         }
 
         span {
@@ -291,12 +291,13 @@ section {
         }
 
         .plus {
+            position: absolute;
             background-color: transparent;
             border: none;
-            margin: 0 0 0 50%;
-            position: absolute;
-            
+            margin: 0 0 0 10em;
         }
+    }
+
     }
 
     .addToCartContainer {
@@ -329,8 +330,6 @@ section {
                 font-weight: 700;
             }
         }
-
-    }
 }
 
 .backdrop {
