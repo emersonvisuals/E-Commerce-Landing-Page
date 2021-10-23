@@ -106,6 +106,37 @@ header nav .right .shoppingCart {
   cursor: pointer;
 }
 
+header nav .right .shoppingCartValueContainer {
+  visibility: hidden;
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #ff7d1a;
+  border-radius: 2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 3;
+  margin: 0 0 5px 10px;
+}
+
+header nav .right .shoppingCartValueContainer .shoppingCartValue {
+  color: white;
+  font-size: 12px;
+}
+
+header nav .right .shoppingCartValueContainer.active {
+  visibility: visible;
+  cursor: pointer;
+}
+
 header nav .right .profile {
   cursor: pointer;
 }

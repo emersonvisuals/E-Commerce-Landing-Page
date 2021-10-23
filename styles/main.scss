@@ -84,6 +84,31 @@ header {
                 cursor: pointer;
             }
 
+            .shoppingCartValueContainer {
+                visibility: hidden;
+                position: absolute;
+                content: '';
+                width: 20px;
+                height: 20px;
+                background-color: $orange;
+                border-radius: 2em;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 3;
+                margin: 0 0 5px 10px;
+
+                .shoppingCartValue {
+                    color: $white;
+                    font-size: 12px;
+                }
+            }
+
+            .shoppingCartValueContainer.active {
+                visibility: visible;
+                cursor: pointer;
+            }
+
             .profile {
                 cursor: pointer;
 

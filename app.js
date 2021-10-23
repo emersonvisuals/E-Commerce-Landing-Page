@@ -50,10 +50,30 @@ shoeCount();
 
 // add to cart
 const addToCart = document.querySelector('button.addToCart');
+const navValueContainer = document.querySelector('.shoppingCartValueContainer');
+const navValue = document.querySelector('span.shoppingCartValue');
+const cartQuantity = document.querySelector('span.cartQuantity');
+const cartValue = document.querySelector('span.cartCost');
+
+console.log(cartValue);
 
 addToCart.addEventListener('click', function(){
+    function quantityCheck(){
+        if (value.innerText > 0) {
+            navValueContainer.classList.add('active');
+        } else {
+            navValueContainer.classList.remove('active');
+        }
+    }
+    quantityCheck();
+
+    navValue.innerText = value.innerText;
+    cartQuantity.innerText = value.innerText;
+    cartValue.innerText = '$' + value.innerText * 125 + '.00';
+
     value.innerText = 0;
 });
+
 
 
 
@@ -67,6 +87,12 @@ shoppingCart.addEventListener('click', function(){
     shoppingMenu.classList.toggle('active');
     backdrop.classList.toggle('shoppingCart');
 });
+
+navValueContainer.addEventListener('click', function(){
+    shoppingMenu.classList.toggle('active');
+    backdrop.classList.toggle('shoppingCart');
+});
+
 
 backdrop.addEventListener('click', function(){
     shoppingMenu.classList.remove('active');
