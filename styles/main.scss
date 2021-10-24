@@ -155,7 +155,27 @@ section {
                 }
             }
 
+            .cartEmpty {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+               
+                h1 {
+                    font-family: $fontFamily;
+                    font-weight: 700;
+                    font-size: 1em;
+                    margin: 0 0 -7em 0;
+                    padding: 0;
+
+                }
+            }
+
+            .cartEmpty.active {
+                visibility: hidden;
+            }
+
             .cartItem {
+                visibility: hidden;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -194,8 +214,11 @@ section {
                         color: $black;
                         font-weight: 700;
                     }
-                    
                 }
+            }
+
+            .cartItem.active {
+                visibility: visible;
             }
         }
 
@@ -204,6 +227,7 @@ section {
             align-items: center;
             justify-content: center;
             padding: 0 0 2em 0;
+            visibility: hidden;
 
             button.cartButton {
                 width: 85%;
@@ -213,6 +237,10 @@ section {
                 padding: 1em;
                 border-radius: 1em;
             }
+        }
+
+        .cartButtonContainer.active {
+            visibility: visible;
         }
     }
 

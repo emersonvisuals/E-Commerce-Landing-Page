@@ -194,7 +194,32 @@ section .cartContainer .cartWrapper .cartHeading h1 {
   padding: 0;
 }
 
+section .cartContainer .cartWrapper .cartEmpty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section .cartContainer .cartWrapper .cartEmpty h1 {
+  font-family: "Kumbh Sans";
+  font-weight: 700;
+  font-size: 1em;
+  margin: 0 0 -7em 0;
+  padding: 0;
+}
+
+section .cartContainer .cartWrapper .cartEmpty.active {
+  visibility: hidden;
+}
+
 section .cartContainer .cartWrapper .cartItem {
+  visibility: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,6 +264,10 @@ section .cartContainer .cartWrapper .cartItem .cartDetails span.cartCost {
   font-weight: 700;
 }
 
+section .cartContainer .cartWrapper .cartItem.active {
+  visibility: visible;
+}
+
 section .cartContainer .cartButtonContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -250,6 +279,7 @@ section .cartContainer .cartButtonContainer {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 0 2em 0;
+  visibility: hidden;
 }
 
 section .cartContainer .cartButtonContainer button.cartButton {
@@ -259,6 +289,10 @@ section .cartContainer .cartButtonContainer button.cartButton {
   border: none;
   padding: 1em;
   border-radius: 1em;
+}
+
+section .cartContainer .cartButtonContainer.active {
+  visibility: visible;
 }
 
 section .cartContainer.active {

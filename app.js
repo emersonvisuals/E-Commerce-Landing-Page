@@ -54,15 +54,24 @@ const navValueContainer = document.querySelector('.shoppingCartValueContainer');
 const navValue = document.querySelector('span.shoppingCartValue');
 const cartQuantity = document.querySelector('span.cartQuantity');
 const cartValue = document.querySelector('span.cartCost');
-
-console.log(cartValue);
+const shoppingCartEmpty = document.querySelector('.cartEmpty');
+const shoppingCartItem = document.querySelector('.cartItem');
+const shoppingCartButton = document.querySelector('.cartButtonContainer');
+const shoppingCartDelete = document.querySelector('.cartDelete img');
 
 addToCart.addEventListener('click', function(){
     function quantityCheck(){
         if (value.innerText > 0) {
             navValueContainer.classList.add('active');
+            shoppingCartItem.classList.add('active');
+            shoppingCartEmpty.classList.add('active');
+            shoppingCartButton.classList.add('active');
+
         } else {
             navValueContainer.classList.remove('active');
+            shoppingCartItem.classList.remove('active');
+            shoppingCartEmpty.classList.remove('active');
+            shoppingCartButton.classList.remove('active');
         }
     }
     quantityCheck();
@@ -72,6 +81,13 @@ addToCart.addEventListener('click', function(){
     cartValue.innerText = '$' + value.innerText * 125 + '.00';
 
     value.innerText = 0;
+});
+
+shoppingCartDelete.addEventListener('click', function(){
+    navValueContainer.classList.remove('active');
+    shoppingCartItem.classList.remove('active');
+    shoppingCartEmpty.classList.remove('active');
+    shoppingCartButton.classList.remove('active');
 });
 
 
@@ -98,6 +114,3 @@ backdrop.addEventListener('click', function(){
     shoppingMenu.classList.remove('active');
     backdrop.classList.remove('shoppingCart');
 });
-
-
-
