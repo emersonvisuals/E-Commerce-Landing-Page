@@ -26,6 +26,8 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    border-bottom: solid 1px #b6bcc8;
+    padding: 0 0 2em 0;
   }
   header nav .left {
     display: -webkit-box;
@@ -93,6 +95,16 @@
     font-weight: 400;
     padding: 0;
     margin: 0;
+    padding: 0 0 2.75em 0;
+    -webkit-transition: 0.25s all;
+    transition: 0.25s all;
+    border-bottom: #ff7d1a 5px;
+  }
+  header nav .links ul li a:hover {
+    border-bottom: #ff7d1a 5px solid;
+    padding: 0 0 2.75em 0;
+    -webkit-transition: 0.25s all;
+    transition: 0.25s all;
   }
   header nav .links.active {
     -webkit-transform: translateX(0px);
@@ -146,18 +158,25 @@
   }
   header nav .right .profile img {
     width: auto;
-    height: 2em;
+    height: 3em;
+    border: 3px solid transparent;
+    border-radius: 10em;
+  }
+  header nav .right .profile img:hover {
+    border: 3px solid orange;
+    -webkit-transition: 0.25s all;
+    transition: 0.25s all;
   }
   section .cartContainer {
     position: absolute;
     z-index: 2;
-    width: 30vw;
+    width: 35%;
     -webkit-transform: translateY(-400px);
             transform: translateY(-400px);
     opacity: 0;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
-    right: 0;
+    right: 3em;
     top: 5em;
   }
   section .cartContainer .cartWrapper {
@@ -289,7 +308,7 @@
   section .cartContainer.active {
     position: absolute;
     z-index: 2;
-    width: 30vw;
+    width: 35%;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
     opacity: 1;
@@ -316,6 +335,8 @@
     height: auto;
     padding: 0 2% 0 10%;
     border-radius: 2em;
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
   }
   section .sectionContent .imageContainer #carouselExampleControls {
     border-radius: 2em;
