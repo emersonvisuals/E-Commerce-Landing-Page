@@ -1,0 +1,501 @@
+@media only screen and (min-width: 1025px) {
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  body.active {
+    overflow: hidden;
+    max-height: 100vh;
+  }
+  header {
+    padding: 2em 5em 2em 5em;
+  }
+  header nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav .left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  header nav .left .hamburgerMenu {
+    visibility: hidden;
+    cursor: pointer;
+  }
+  header nav .left .logo {
+    padding: 0;
+    margin: 0;
+  }
+  header nav .links {
+    position: initial;
+    background-color: transparent;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header nav .links .exit {
+    visibility: hidden;
+    padding: 0;
+    margin: 0;
+  }
+  header nav .links .exit img {
+    cursor: pointer;
+  }
+  header nav .links ul {
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0;
+    margin: 0;
+  }
+  header nav .links ul li {
+    padding: 0 1em;
+    margin: 0;
+  }
+  header nav .links ul li a {
+    text-decoration: none;
+    color: #68707d;
+    font-family: "Kumbh Sans";
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+  }
+  header nav .links.active {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+  header nav .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header nav .right .shoppingCart {
+    padding: 0 1em 0 0;
+    z-index: 3;
+    cursor: pointer;
+  }
+  header nav .right .shoppingCartValueContainer {
+    visibility: hidden;
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: #ff7d1a;
+    border-radius: 2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 3;
+    margin: 0 0 5px 10px;
+  }
+  header nav .right .shoppingCartValueContainer .shoppingCartValue {
+    color: white;
+    font-size: 12px;
+  }
+  header nav .right .shoppingCartValueContainer.active {
+    visibility: visible;
+    cursor: pointer;
+  }
+  header nav .right .profile {
+    cursor: pointer;
+  }
+  header nav .right .profile img {
+    width: auto;
+    height: 2em;
+  }
+  section .cartContainer {
+    position: absolute;
+    z-index: 2;
+    width: 30vw;
+    -webkit-transform: translateY(-400px);
+            transform: translateY(-400px);
+    opacity: 0;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+    right: 0;
+    top: 5em;
+  }
+  section .cartContainer .cartWrapper {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 3% 5%;
+    border-radius: 1em;
+    -webkit-box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, 0.15);
+  }
+  section .cartContainer .cartWrapper .cartHeading {
+    border-bottom: 1px solid #b6bcc8;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 1.5em;
+  }
+  section .cartContainer .cartWrapper .cartHeading h1 {
+    font-family: "Kumbh Sans";
+    font-weight: 700;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+  }
+  section .cartContainer .cartWrapper .cartEmpty {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section .cartContainer .cartWrapper .cartEmpty h1 {
+    font-family: "Kumbh Sans";
+    font-weight: 700;
+    font-size: 1em;
+    margin: 0 0 -7em 0;
+    padding: 0;
+  }
+  section .cartContainer .cartWrapper .cartEmpty.active {
+    visibility: hidden;
+  }
+  section .cartContainer .cartWrapper .cartDelete img {
+    cursor: pointer;
+  }
+  section .cartContainer .cartWrapper .cartItem {
+    visibility: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 1.5em;
+  }
+  section .cartContainer .cartWrapper .cartItem .cartImage img {
+    height: auto;
+    width: 4em;
+  }
+  section .cartContainer .cartWrapper .cartItem .cartDetails h1 {
+    font-family: "Kumbh Sans";
+    font-weight: 400;
+    font-size: 1em;
+    margin: 0;
+    padding: 0 0 0.25em 0;
+    color: #b6bcc8;
+  }
+  section .cartContainer .cartWrapper .cartItem .cartDetails h2 {
+    font-family: "Kumbh Sans";
+    font-weight: 400;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    color: #b6bcc8;
+  }
+  section .cartContainer .cartWrapper .cartItem .cartDetails span.cartCost {
+    color: black;
+    font-weight: 700;
+  }
+  section .cartContainer .cartWrapper .cartItem.active {
+    visibility: visible;
+  }
+  section .cartContainer .cartButtonContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 0 2em 0;
+    visibility: hidden;
+  }
+  section .cartContainer .cartButtonContainer button.cartButton {
+    width: 85%;
+    background-color: #ff7d1a;
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 1em;
+  }
+  section .cartContainer .cartButtonContainer.active {
+    visibility: visible;
+  }
+  section .cartContainer.active {
+    position: absolute;
+    z-index: 2;
+    width: 30vw;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+  section .sectionContent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section .sectionContent .imageContainer {
+    width: 50vw;
+    height: auto;
+    padding: 0 2% 0 10%;
+  }
+  section .sectionContent .descriptionContainer {
+    padding: 5% 10% 0 2%;
+    width: 50vw;
+  }
+  section .sectionContent .descriptionContainer .description h1 {
+    text-transform: uppercase;
+    color: #ff7d1a;
+    font-size: 1em;
+    font-family: "Kumbh Sans";
+    font-weight: 700;
+  }
+  section .sectionContent .descriptionContainer .description h2 {
+    font-size: 2em;
+    font-family: "Kumbh Sans";
+    font-weight: 700;
+    color: black;
+  }
+  section .sectionContent .descriptionContainer .description p {
+    font-family: "Kumbh Sans";
+    color: #68707d;
+  }
+  section .sectionContent .priceContainer {
+    margin: 1em 0 0 0;
+  }
+  section .sectionContent .priceContainer .cost {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section .sectionContent .priceContainer .cost .discount {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section .sectionContent .priceContainer .cost .discount h1 {
+    font-family: "Kumbh Sans";
+    font-weight: 700;
+  }
+  section .sectionContent .priceContainer .cost .discount h2 {
+    background-color: #ffede0;
+    padding: 0.25em;
+    font-size: 1.25em;
+    margin: 0 0 0.25em 0.5em;
+    color: #ff7d1a;
+    border-radius: 0.25em;
+    font-family: "Kumbh Sans";
+    font-weight: 700;
+  }
+  section .sectionContent .priceContainer .cost .remaining {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section .sectionContent .priceContainer .cost .remaining h1 {
+    font-size: 1.25em;
+    color: #b6bcc8;
+    text-decoration: line-through;
+  }
+  section .sectionContent .buttonContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 1em 0 0 0;
+    padding: 0.5em;
+    background-color: #f7f8fd;
+    border-radius: 0.5em;
+  }
+  section .sectionContent .buttonContainer .minus {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    left: 55%;
+  }
+  section .sectionContent .buttonContainer span {
+    font-family: "Kumbh Sans";
+    font-weight: 700;
+    font-size: 1.25em;
+  }
+  section .sectionContent .buttonContainer .plus {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    right: 13%;
+  }
+  section .sectionContent .addToCartContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 1em 0 3em 0;
+  }
+  section .sectionContent .addToCartContainer .addToCart {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100vw;
+    padding: 1em;
+    background-color: #ff7d1a;
+    border: none;
+    border-radius: 0.25em;
+    -webkit-box-shadow: 0px 10px 30px 2px rgba(255, 176, 176, 0.5);
+            box-shadow: 0px 10px 30px 2px rgba(255, 176, 176, 0.5);
+  }
+  section .sectionContent .addToCartContainer .addToCart img {
+    padding: 0 1em 0 0;
+    -webkit-filter: brightness(2000%);
+            filter: brightness(2000%);
+  }
+  section .sectionContent .addToCartContainer .addToCart p {
+    margin: 0.1em 0 0 0;
+    color: white;
+    font-family: "Kumbh Sans";
+    font-size: 1em;
+    font-weight: 700;
+  }
+  .backdrop {
+    visibility: hidden;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: transparent;
+    opacity: 0;
+    top: 0;
+    z-index: 2;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+  .backdrop.active {
+    visibility: visible;
+    position: absolute;
+    content: '';
+    width: 100vw;
+    max-height: 100vh;
+    background-color: black;
+    opacity: 0.5;
+    top: 0;
+    z-index: 1;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+  .backdrop.shoppingCart {
+    visibility: visible;
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    opacity: 0.5;
+    top: 0;
+    z-index: 1;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+  }
+}
+/*# sourceMappingURL=desktop.css.map */

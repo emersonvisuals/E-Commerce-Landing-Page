@@ -241,6 +241,10 @@ section .cartContainer .cartWrapper .cartItem .cartImage img {
   width: 4em;
 }
 
+section .cartContainer .cartWrapper .cartItem .cartDelete img {
+  cursor: pointer;
+}
+
 section .cartContainer .cartWrapper .cartItem .cartDetails h1 {
   font-family: "Kumbh Sans";
   font-weight: 400;
