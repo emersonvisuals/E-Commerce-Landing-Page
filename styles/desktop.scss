@@ -287,6 +287,31 @@
                 width: 50vw;
                 height: auto;
                 padding: 0 2% 0 10%;
+                border-radius: 2em;
+
+                #carouselExampleControls {
+                    border-radius: 2em;
+
+                    .carousel-inner {
+                        border-radius: 2em;
+
+                        .carousel-item {
+                            border-radius: 2em;
+
+                            img {
+                                border-radius: 2em;
+                            }
+                        }
+
+                        .carousel-item.active {
+                            border-radius: 0;
+
+                            img {
+                                border-radius: 2em;
+                            }
+                        }
+                    }
+                }
             }
                 
             .descriptionContainer {

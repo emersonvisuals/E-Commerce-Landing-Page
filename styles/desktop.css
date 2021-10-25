@@ -315,6 +315,25 @@
     width: 50vw;
     height: auto;
     padding: 0 2% 0 10%;
+    border-radius: 2em;
+  }
+  section .sectionContent .imageContainer #carouselExampleControls {
+    border-radius: 2em;
+  }
+  section .sectionContent .imageContainer #carouselExampleControls .carousel-inner {
+    border-radius: 2em;
+  }
+  section .sectionContent .imageContainer #carouselExampleControls .carousel-inner .carousel-item {
+    border-radius: 2em;
+  }
+  section .sectionContent .imageContainer #carouselExampleControls .carousel-inner .carousel-item img {
+    border-radius: 2em;
+  }
+  section .sectionContent .imageContainer #carouselExampleControls .carousel-inner .carousel-item.active {
+    border-radius: 0;
+  }
+  section .sectionContent .imageContainer #carouselExampleControls .carousel-inner .carousel-item.active img {
+    border-radius: 2em;
   }
   section .sectionContent .descriptionContainer {
     padding: 5% 10% 0 2%;
