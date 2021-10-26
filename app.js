@@ -103,7 +103,7 @@ shoppingCart.addEventListener('click', function(){
     shoppingMenu.classList.toggle('active');
     backdrop.classList.toggle('shoppingCart');
 });
-
+ 
 navValueContainer.addEventListener('click', function(){
     shoppingMenu.classList.toggle('active');
     backdrop.classList.toggle('shoppingCart');
@@ -113,4 +113,42 @@ navValueContainer.addEventListener('click', function(){
 backdrop.addEventListener('click', function(){
     shoppingMenu.classList.remove('active');
     backdrop.classList.remove('shoppingCart');
+});
+
+
+// image changes
+const imageOne = document.querySelector('.image01');
+const imageTwo = document.querySelector('.image02');
+const imageThree = document.querySelector('.image03');
+const imageFour = document.querySelector('.image04');
+const mainImage = document.querySelector('.desktopImage');
+
+console.log(imageTwo);
+
+imageTwo.addEventListener('click', function(){
+    imageTwo.classList.add('active');
+    imageOne.classList.remove('active');
+    imageThree.classList.remove('active');
+    imageFour.classList.remove('active');
+});
+
+imageOne.addEventListener('click', function(){
+    imageOne.classList.add('active');
+    imageTwo.classList.remove('active');
+    imageThree.classList.remove('active');
+    imageFour.classList.remove('active');
+});
+
+imageThree.addEventListener('click', function(){
+    imageThree.classList.add('active');
+    imageTwo.classList.remove('active');
+    imageOne.classList.remove('active');
+    imageFour.classList.remove('active');
+});
+
+imageFour.addEventListener('click', function(){
+    imageFour.classList.add('active');
+    imageThree.classList.remove('active');
+    imageOne.classList.remove('active');
+    imageTwo.classList.remove('active');
 });

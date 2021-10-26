@@ -330,13 +330,83 @@
         -ms-flex-direction: row;
             flex-direction: row;
   }
+  section .sectionContent .desktopImagePreviews {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    visibility: visible;
+    padding: 2em 0em 2em 5em;
+  }
+  section .sectionContent .desktopImagePreviews .main img {
+    width: auto;
+    height: 25em;
+    border-radius: 5%;
+  }
+  section .sectionContent .desktopImagePreviews .previewsContainer {
+    width: 100%;
+  }
+  section .sectionContent .desktopImagePreviews .previewsContainer .previews {
+    margin: 1em 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section .sectionContent .desktopImagePreviews .previewsContainer .previews img.image01.active {
+    border: solid 3px #ff7d1a;
+    background-color: #ff7d1a;
+    -webkit-filter: opacity(0.5);
+            filter: opacity(0.5);
+  }
+  section .sectionContent .desktopImagePreviews .previewsContainer .previews img.image02.active {
+    border: solid 3px #ff7d1a;
+    background-color: #ff7d1a;
+    -webkit-filter: opacity(0.5);
+            filter: opacity(0.5);
+  }
+  section .sectionContent .desktopImagePreviews .previewsContainer .previews img.image03.active {
+    border: solid 3px #ff7d1a;
+    background-color: #ff7d1a;
+    -webkit-filter: opacity(0.5);
+            filter: opacity(0.5);
+  }
+  section .sectionContent .desktopImagePreviews .previewsContainer .previews img.image04.active {
+    border: solid 3px #ff7d1a;
+    background-color: #ff7d1a;
+    -webkit-filter: opacity(0.5);
+            filter: opacity(0.5);
+  }
+  section .sectionContent .desktopImagePreviews .previewsContainer .previews img {
+    border: solid 3px transparent;
+    width: auto;
+    height: 5em;
+    border-radius: 1em;
+    cursor: pointer;
+  }
   section .sectionContent .imageContainer {
+    display: none;
     width: 50vw;
     height: auto;
     padding: 0 2% 0 10%;
     border-radius: 2em;
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
+    visibility: hidden;
   }
   section .sectionContent .imageContainer #carouselExampleControls {
     border-radius: 2em;
@@ -357,7 +427,7 @@
     border-radius: 2em;
   }
   section .sectionContent .descriptionContainer {
-    padding: 5% 10% 0 2%;
+    padding: 0 0 0 10%;
     width: 50vw;
   }
   section .sectionContent .descriptionContainer .description h1 {
@@ -439,10 +509,9 @@
     border-radius: 0.5em;
   }
   section .sectionContent .buttonContainer .minus {
-    position: absolute;
+    position: relative;
     background-color: transparent;
     border: none;
-    left: 55%;
   }
   section .sectionContent .buttonContainer span {
     font-family: "Kumbh Sans";
@@ -450,10 +519,9 @@
     font-size: 1.25em;
   }
   section .sectionContent .buttonContainer .plus {
-    position: absolute;
+    position: relative;
     background-color: transparent;
     border: none;
-    right: 13%;
   }
   section .sectionContent .addToCartContainer {
     display: -webkit-box;

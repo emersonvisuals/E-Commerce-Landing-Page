@@ -146,6 +146,11 @@ header nav .right .profile img {
   height: 2em;
 }
 
+section .desktopImagePreviews {
+  visibility: hidden;
+  display: none;
+}
+
 section .cartContainer {
   position: absolute;
   z-index: 2;

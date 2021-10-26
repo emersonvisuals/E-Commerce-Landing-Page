@@ -123,6 +123,11 @@ header {
 
 section {
 
+    .desktopImagePreviews {
+        visibility: hidden;
+        display: none;
+    }
+
     .cartContainer {
         position: absolute;
         z-index: 2;

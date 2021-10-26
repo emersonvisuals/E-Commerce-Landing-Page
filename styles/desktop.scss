@@ -301,12 +301,76 @@
             justify-content: center;
             flex-direction: row;
 
+            .desktopImagePreviews {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                visibility: visible;
+                padding: 2em 0em 2em 5em;
+
+                .main {
+
+
+                    img {
+                        width: auto;
+                        height: 25em;
+                        border-radius: 5%;
+                    }
+                }
+
+                .previewsContainer {
+                    width: 100%;
+
+                    .previews {
+                        margin: 1em 0 0 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content:space-between;
+                        
+                        img.image01.active {
+                            border: solid 3px $orange;
+                            background-color: $orange;
+                            filter: opacity(0.5);
+                        }
+                        img.image02.active {
+                            border: solid 3px $orange;
+                            background-color: $orange;
+                            filter: opacity(0.5);
+                        }
+                        img.image03.active {
+                            border: solid 3px $orange;
+                            background-color: $orange;
+                            filter: opacity(0.5);
+                        }
+                        img.image04.active {
+                            border: solid 3px $orange;
+                            background-color: $orange;
+                            filter: opacity(0.5);
+                        }
+    
+                        img {
+                            border: solid 3px transparent;
+                            width: auto;
+                            height: 5em;
+                            border-radius: 1em;
+                            cursor: pointer;
+                        }
+
+                    }
+
+                }
+
+            }
+
             .imageContainer {
+                display: none;
                 width: 50vw;
                 height: auto;
                 padding: 0 2% 0 10%;
                 border-radius: 2em;
                 transform: scale(0.8);
+                visibility: hidden;
 
                 #carouselExampleControls {
                     border-radius: 2em;
@@ -334,9 +398,9 @@
             }
                 
             .descriptionContainer {
-                padding: 5% 10% 0 2%;
+                padding: 0 0 0 10%;
                 width: 50vw;
-        
+                
                 .description {
                     
                     h1 {
@@ -412,10 +476,9 @@
                 border-radius:0.5em;
         
                 .minus {
-                    position: absolute;
+                    position:relative;
                     background-color: transparent;
                     border: none;
-                    left: 55%;
                 }
         
                 span {
@@ -425,10 +488,9 @@
                 }
         
                 .plus {
-                    position: absolute;
+                    position: relative;
                     background-color: transparent;
                     border: none;
-                    right: 13%;
                 }
             }
         
