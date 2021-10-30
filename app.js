@@ -123,13 +123,14 @@ const imageThree = document.querySelector('.image03');
 const imageFour = document.querySelector('.image04');
 const mainImage = document.querySelector('.desktopImage');
 
-console.log(imageTwo);
 
 imageTwo.addEventListener('click', function(){
     imageTwo.classList.add('active');
     imageOne.classList.remove('active');
     imageThree.classList.remove('active');
     imageFour.classList.remove('active');
+    mainImage.src = 'images/image-product-2.jpg';
+
 });
 
 imageOne.addEventListener('click', function(){
@@ -137,6 +138,7 @@ imageOne.addEventListener('click', function(){
     imageTwo.classList.remove('active');
     imageThree.classList.remove('active');
     imageFour.classList.remove('active');
+    mainImage.src = 'images/image-product-1.jpg';
 });
 
 imageThree.addEventListener('click', function(){
@@ -144,6 +146,7 @@ imageThree.addEventListener('click', function(){
     imageTwo.classList.remove('active');
     imageOne.classList.remove('active');
     imageFour.classList.remove('active');
+    mainImage.src = 'images/image-product-3.jpg';
 });
 
 imageFour.addEventListener('click', function(){
@@ -151,4 +154,19 @@ imageFour.addEventListener('click', function(){
     imageThree.classList.remove('active');
     imageOne.classList.remove('active');
     imageTwo.classList.remove('active');
+    mainImage.src = 'images/image-product-4.jpg';
+});
+
+
+// image zoom 
+const carouselContainer = document.querySelector('.imageContainer');
+
+mainImage.addEventListener('click', function(){
+    carouselContainer.classList.add('active');
+    backdrop.classList.add('active');
+});
+
+backdrop.addEventListener('click', function(){
+    carouselContainer.classList.remove('active');
+    backdrop.classList.remove('active');
 });

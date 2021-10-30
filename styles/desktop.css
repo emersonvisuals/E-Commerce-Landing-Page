@@ -7,7 +7,7 @@
   }
   body.active {
     overflow: hidden;
-    max-height: 100vh;
+    max-height: 1imageContainer00vh;
   }
   header {
     padding: 2em 5em 2em 5em;
@@ -399,7 +399,7 @@
     cursor: pointer;
   }
   section .sectionContent .imageContainer {
-    display: none;
+    position: absolute;
     width: 50vw;
     height: auto;
     padding: 0 2% 0 10%;
@@ -426,8 +426,46 @@
   section .sectionContent .imageContainer #carouselExampleControls .carousel-inner .carousel-item.active img {
     border-radius: 2em;
   }
+  section .sectionContent .imageContainer.active {
+    visibility: visible;
+    z-index: 4;
+    width: 40%;
+    height: auto;
+    padding: 0;
+    border-radius: 0em;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 0 0 4em 0;
+  }
+  section .sectionContent .imageContainer.active #carouselExampleControls {
+    border-radius: 0;
+  }
+  section .sectionContent .imageContainer.active #carouselExampleControls .carousel-inner {
+    border-radius: 0;
+  }
+  section .sectionContent .imageContainer.active #carouselExampleControls .carousel-inner .carousel-item {
+    border-radius: 0;
+  }
+  section .sectionContent .imageContainer.active #carouselExampleControls .carousel-inner .carousel-item img {
+    border-radius: 0;
+  }
+  section .sectionContent .imageContainer.active #carouselExampleControls .carousel-inner .carousel-item.active {
+    border-radius: 0;
+  }
+  section .sectionContent .imageContainer.active #carouselExampleControls .carousel-inner .carousel-item.active img {
+    border-radius: 0;
+  }
   section .sectionContent .descriptionContainer {
-    padding: 0 0 0 10%;
+    padding: 0 5% 0 5%;
     width: 50vw;
   }
   section .sectionContent .descriptionContainer .description h1 {
@@ -586,9 +624,9 @@
     width: 100vw;
     max-height: 100vh;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.8;
     top: 0;
-    z-index: 1;
+    z-index: 3;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
   }

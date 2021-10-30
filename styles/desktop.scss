@@ -10,7 +10,7 @@
     
     body.active {
         overflow: hidden;
-        max-height: 100vh;
+        max-height: 1imageContainer00vh;
     }
     
     header {
@@ -364,7 +364,7 @@
             }
 
             .imageContainer {
-                display: none;
+                position: absolute;
                 width: 50vw;
                 height: auto;
                 padding: 0 2% 0 10%;
@@ -396,9 +396,48 @@
                     }
                 }
             }
+
+            .imageContainer.active {
+                visibility: visible;
+                z-index: 4;
+                width: 40%;
+                height: auto;
+                padding: 0;
+                border-radius: 0em;
+                transform: scale(1);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 0 4em 0;
+
+                
+                #carouselExampleControls {
+                    border-radius: 0;
+
+                    .carousel-inner {
+                        border-radius: 0;
+
+                        .carousel-item {
+                            border-radius: 0;
+
+                            img {
+                                border-radius: 0;
+                            }
+                        }
+
+                        .carousel-item.active {
+                            border-radius: 0;
+
+                            img {
+                                border-radius: 0;
+                            }
+                        }
+                    }
+                }
+            }
                 
             .descriptionContainer {
-                padding: 0 0 0 10%;
+                padding: 0 5% 0 5%;
                 width: 50vw;
                 
                 .description {
@@ -549,10 +588,11 @@
         width:100vw;
         max-height: 100vh;
         background-color: $black;
-        opacity: 0.5;
+        opacity: 0.8;
         top:0;
-        z-index: 1;
+        z-index: 3;
         transition: 0.5s all;
+
     }
     
     .backdrop.shoppingCart {
