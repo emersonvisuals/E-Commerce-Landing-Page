@@ -493,46 +493,60 @@
     visibility: visible;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
+    margin: 0 0 7em 0;
   }
   section .sectionContent .previewsContainerLarge.active .arrows {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     z-index: 5;
-    position: relative;
-    width: 100%;
+    width: 440px;
   }
   section .sectionContent .previewsContainerLarge.active .arrows .arrowLeft {
-    position: absolute;
-    content: '';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 40px;
     height: 40px;
-    background-image: url(/images/icon-previous.svg);
     background-color: #f7f8fd;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30%;
-    left: 30%;
-    -webkit-transform: translateY(175px);
-            transform: translateY(175px);
     border-radius: 2em;
+    -webkit-transform: translateY(225px);
+            transform: translateY(225px);
   }
   section .sectionContent .previewsContainerLarge.active .arrows .arrowRight {
-    position: absolute;
-    content: '';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 40px;
     height: 40px;
-    background-image: url(/images/icon-next.svg);
     background-color: #f7f8fd;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 30%;
-    right: 30%;
-    -webkit-transform: translateY(175px);
-            transform: translateY(175px);
     border-radius: 2em;
+    -webkit-transform: translateY(225px);
+            transform: translateY(225px);
   }
   section .sectionContent .previewsContainerLarge.active .desktopImageLarge {
     z-index: 3;

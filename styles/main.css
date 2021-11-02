@@ -54,7 +54,7 @@ header nav .links {
   left: 0;
   height: 100vh;
   padding: 0 6em 0 0;
-  z-index: 2;
+  z-index: 4;
   -webkit-transform: translateX(-250px);
           transform: translateX(-250px);
   -webkit-transition: 0.5s all;
@@ -515,5 +515,10 @@ section .buttonContainer .plus {
   z-index: 1;
   -webkit-transition: 0.5s all;
   transition: 0.5s all;
+}
+
+.previewsContainerLarge {
+  visibility: hidden;
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

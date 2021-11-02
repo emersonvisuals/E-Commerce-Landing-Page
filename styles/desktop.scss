@@ -445,41 +445,40 @@
                 align-items: center;
                 visibility: visible;
                 transition: 0.5s all;
+                margin: 0 0 7em 0;
 
                 .arrows {
                     display: flex;
-                    justify-content: space-around;
+                    align-items: center;
+                    justify-content: space-between;
                     z-index: 5;
-                    position: relative;
-                    width: 100%;
+                    width: 440px;
 
                     .arrowLeft {
-                        position: absolute;
-                        content: '';
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         width: 40px;
                         height: 40px;
-                        background-image: url(/images/icon-previous.svg);
                         background-color: $lightGrayishBlue;
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: 30%;
-                        left: 30%;
-                        transform: translateY(175px);
                         border-radius: 2em;
+                        transform: translateY(225px);
                     }
                     .arrowRight {
-                        position: absolute;
-                        content: '';
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
                         width: 40px;
                         height: 40px;
-                        background-image: url(/images/icon-next.svg);
                         background-color: $lightGrayishBlue;
                         background-repeat: no-repeat;
                         background-position: center;
                         background-size: 30%;
-                        right: 30%;
-                        transform: translateY(175px);
                         border-radius: 2em;
+                        transform: translateY(225px);
                     }
                 }
 
