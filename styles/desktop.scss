@@ -357,11 +357,8 @@
                             border-radius: 1em;
                             cursor: pointer;
                         }
-
                     }
-
                 }
-
             }
 
             .imageContainer {
@@ -447,6 +444,44 @@
                 justify-content: center;
                 align-items: center;
                 visibility: visible;
+                transition: 0.5s all;
+
+                .arrows {
+                    display: flex;
+                    justify-content: space-around;
+                    z-index: 5;
+                    position: relative;
+                    width: 100%;
+
+                    .arrowLeft {
+                        position: absolute;
+                        content: '';
+                        width: 40px;
+                        height: 40px;
+                        background-image: url(/images/icon-previous.svg);
+                        background-color: $lightGrayishBlue;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 30%;
+                        left: 30%;
+                        transform: translateY(175px);
+                        border-radius: 2em;
+                    }
+                    .arrowRight {
+                        position: absolute;
+                        content: '';
+                        width: 40px;
+                        height: 40px;
+                        background-image: url(/images/icon-next.svg);
+                        background-color: $lightGrayishBlue;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 30%;
+                        right: 30%;
+                        transform: translateY(175px);
+                        border-radius: 2em;
+                    }
+                }
 
                 .desktopImageLarge {
                     z-index: 3;
@@ -456,6 +491,7 @@
                     width: auto;
                     height: 25em;
                     z-index: 4;
+                    
                 }
 
                 .previewsLarge {
