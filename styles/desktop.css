@@ -7,7 +7,7 @@
   }
   body.active {
     overflow: hidden;
-    max-height: 1imageContainer00vh;
+    max-height: 100vh;
   }
   header {
     padding: 2em 5em 2em 5em;
@@ -427,15 +427,73 @@
   section .sectionContent .imageContainer #carouselExampleControls .carousel-inner .carousel-item.active img {
     border-radius: 2em;
   }
-  section .sectionContent .imageContainer.active {
+  section .sectionContent .previewsContainerLarge {
+    width: 100%;
+    visibility: hidden;
+    display: none;
+  }
+  section .sectionContent .previewsContainerLarge .previewsLarge {
+    margin: 1em 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  section .sectionContent .previewsContainerLarge .previewsLarge img {
+    border: solid 3px transparent;
+    width: auto;
+    height: 6em;
+    border-radius: 1em;
+    cursor: pointer;
+  }
+  section .sectionContent .previewsContainerLarge .previewsLarge img.imageOne.active {
+    border: solid 3px #ff7d1a;
+    background-color: #ff7d1a;
+    -webkit-filter: opacity(0.75);
+            filter: opacity(0.75);
+  }
+  section .sectionContent .previewsContainerLarge .previewsLarge img.imageTwo.active {
+    border: solid 3px #ff7d1a;
+    background-color: #ff7d1a;
+    -webkit-filter: opacity(0.75);
+            filter: opacity(0.75);
+  }
+  section .sectionContent .previewsContainerLarge .previewsLarge img.imageThree.active {
+    border: solid 3px #ff7d1a;
+    background-color: #ff7d1a;
+    -webkit-filter: opacity(0.75);
+            filter: opacity(0.75);
+  }
+  section .sectionContent .previewsContainerLarge .previewsLarge img.imageFour.active {
+    border: solid 3px #ff7d1a;
+    background-color: #ff7d1a;
+    -webkit-filter: opacity(0.75);
+            filter: opacity(0.75);
+  }
+  section .sectionContent .previewsContainerLarge.active {
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     visibility: visible;
-    z-index: 4;
-    width: 30%;
-    height: auto;
-    padding: 0;
-    border-radius: 0em;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+  }
+  section .sectionContent .previewsContainerLarge.active .desktopImageLarge {
+    z-index: 3;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -445,52 +503,51 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding: 0;
-    margin: 0 0 5% 0;
+    width: auto;
+    height: 25em;
+    z-index: 4;
   }
-  section .sectionContent .imageContainer.active #carouselExampleControls {
-    border-radius: 0;
+  section .sectionContent .previewsContainerLarge.active .previewsLarge {
+    z-index: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: auto;
+    height: 20em;
+    z-index: 4;
+    height: auto;
   }
-  section .sectionContent .imageContainer.active #carouselExampleControls .carousel-inner {
-    border-radius: 0;
-  }
-  section .sectionContent .imageContainer.active #carouselExampleControls .carousel-inner .carousel-item {
-    border-radius: 0;
-  }
-  section .sectionContent .imageContainer.active #carouselExampleControls .carousel-inner .carousel-item img {
-    border-radius: 0;
-  }
-  section .sectionContent .imageContainer.active #carouselExampleControls .carousel-inner .carousel-item.active {
-    border-radius: 0;
-  }
-  section .sectionContent .imageContainer.active #carouselExampleControls .carousel-inner .carousel-item.active img {
-    border-radius: 0;
-  }
-  section .sectionContent .descriptionContainer {
+  section .descriptionContainer {
     padding: 0 5% 0 5%;
     width: 50vw;
   }
-  section .sectionContent .descriptionContainer .description h1 {
+  section .descriptionContainer .description h1 {
     text-transform: uppercase;
     color: #ff7d1a;
     font-size: 1em;
     font-family: "Kumbh Sans";
     font-weight: 700;
   }
-  section .sectionContent .descriptionContainer .description h2 {
+  section .descriptionContainer .description h2 {
     font-size: 2em;
     font-family: "Kumbh Sans";
     font-weight: 700;
     color: black;
   }
-  section .sectionContent .descriptionContainer .description p {
+  section .descriptionContainer .description p {
     font-family: "Kumbh Sans";
     color: #68707d;
   }
-  section .sectionContent .priceContainer {
+  section .priceContainer {
     margin: 1em 0 0 0;
   }
-  section .sectionContent .priceContainer .cost {
+  section .priceContainer .cost {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -498,7 +555,7 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  section .sectionContent .priceContainer .cost .discount {
+  section .priceContainer .cost .discount {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -506,11 +563,11 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  section .sectionContent .priceContainer .cost .discount h1 {
+  section .priceContainer .cost .discount h1 {
     font-family: "Kumbh Sans";
     font-weight: 700;
   }
-  section .sectionContent .priceContainer .cost .discount h2 {
+  section .priceContainer .cost .discount h2 {
     background-color: #ffede0;
     padding: 0.25em;
     font-size: 1.25em;
@@ -520,7 +577,7 @@
     font-family: "Kumbh Sans";
     font-weight: 700;
   }
-  section .sectionContent .priceContainer .cost .remaining {
+  section .priceContainer .cost .remaining {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -528,12 +585,12 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  section .sectionContent .priceContainer .cost .remaining h1 {
+  section .priceContainer .cost .remaining h1 {
     font-size: 1.25em;
     color: #b6bcc8;
     text-decoration: line-through;
   }
-  section .sectionContent .buttonContainer {
+  section .buttonContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -548,22 +605,22 @@
     background-color: #f7f8fd;
     border-radius: 0.5em;
   }
-  section .sectionContent .buttonContainer .minus {
+  section .buttonContainer .minus {
     position: relative;
     background-color: transparent;
     border: none;
   }
-  section .sectionContent .buttonContainer span {
+  section .buttonContainer span {
     font-family: "Kumbh Sans";
     font-weight: 700;
     font-size: 1.25em;
   }
-  section .sectionContent .buttonContainer .plus {
+  section .buttonContainer .plus {
     position: relative;
     background-color: transparent;
     border: none;
   }
-  section .sectionContent .addToCartContainer {
+  section .addToCartContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -575,7 +632,7 @@
             justify-content: center;
     margin: 1em 0 3em 0;
   }
-  section .sectionContent .addToCartContainer .addToCart {
+  section .addToCartContainer .addToCart {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -593,60 +650,63 @@
     -webkit-box-shadow: 0px 10px 30px 2px rgba(255, 176, 176, 0.5);
             box-shadow: 0px 10px 30px 2px rgba(255, 176, 176, 0.5);
   }
-  section .sectionContent .addToCartContainer .addToCart img {
+  section .addToCartContainer .addToCart img {
     padding: 0 1em 0 0;
     -webkit-filter: brightness(2000%);
             filter: brightness(2000%);
   }
-  section .sectionContent .addToCartContainer .addToCart p {
+  section .addToCartContainer .addToCart p {
     margin: 0.1em 0 0 0;
     color: white;
     font-family: "Kumbh Sans";
     font-size: 1em;
     font-weight: 700;
   }
-  .backdrop {
-    visibility: hidden;
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: transparent;
-    opacity: 0;
-    top: 0;
-    z-index: 2;
-    -webkit-transition: 0.5s all;
-    transition: 0.5s all;
-  }
-  .backdrop.active {
-    visibility: visible;
-    position: absolute;
-    content: '';
-    width: 100vw;
-    max-height: 100vh;
-    background-color: black;
-    opacity: 0.8;
-    top: 0;
-    z-index: 3;
-    -webkit-transition: 0.5s all;
-    transition: 0.5s all;
-    max-width: 100vw;
-    max-height: 100vh;
-    cursor: pointer;
-  }
-  .backdrop.shoppingCart {
-    visibility: visible;
-    position: absolute;
-    content: '';
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    opacity: 0.5;
-    top: 0;
-    z-index: 1;
-    -webkit-transition: 0.5s all;
-    transition: 0.5s all;
-  }
+}
+
+.backdrop {
+  visibility: hidden;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+  opacity: 0;
+  top: 0;
+  z-index: 2;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+}
+
+.backdrop.active {
+  visibility: visible;
+  position: absolute;
+  content: '';
+  width: 100vw;
+  max-height: 100vh;
+  background-color: black;
+  opacity: 0.8;
+  top: 0;
+  z-index: 3;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
+  max-width: 100vw;
+  max-height: 100vh;
+  cursor: pointer;
+}
+
+.backdrop.shoppingCart {
+  visibility: visible;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  opacity: 0.5;
+  top: 0;
+  z-index: 1;
+  -webkit-transition: 0.5s all;
+  transition: 0.5s all;
 }
 /*# sourceMappingURL=desktop.css.map */

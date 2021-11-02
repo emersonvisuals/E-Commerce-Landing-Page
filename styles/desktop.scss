@@ -10,7 +10,7 @@
     
     body.active {
         overflow: hidden;
-        max-height: 1imageContainer00vh;
+        max-height: 100vh;
     }
     
     header {
@@ -397,45 +397,79 @@
                     }
                 }
             }
+            
+            .previewsContainerLarge {
+                width: 100%;
+                visibility: hidden;
+                display: none;
 
-            .imageContainer.active {
-                visibility: visible;
-                z-index: 4;
-                width: 30%;
-                height: auto;
-                padding: 0;
-                border-radius: 0em;
-                transform: scale(1);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 0;
-                margin: 0 0 5% 0;
-                
-                #carouselExampleControls {
-                    border-radius: 0;
+                .previewsLarge {
+                    margin: 1em 0 0 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content:space-between;
 
-                    .carousel-inner {
-                        border-radius: 0;
+                    img {
+                        border: solid 3px transparent;
+                        width: auto;
+                        height: 6em;
+                        border-radius: 1em;
+                        cursor: pointer;
+                    }
 
-                        .carousel-item {
-                            border-radius: 0;
-
-                            img {
-                                border-radius: 0;
-                            }
-                        }
-
-                        .carousel-item.active {
-                            border-radius: 0;
-
-                            img {
-                                border-radius: 0;
-                            }
-                        }
+                    img.imageOne.active {
+                        border: solid 3px $orange;
+                        background-color: $orange;
+                        filter: opacity(0.75);
+                    }
+                    img.imageTwo.active {
+                        border: solid 3px $orange;
+                        background-color: $orange;
+                        filter: opacity(0.75);
+                    }
+                    img.imageThree.active {
+                        border: solid 3px $orange;
+                        background-color: $orange;
+                        filter: opacity(0.75);
+                    }
+                    img.imageFour.active {
+                        border: solid 3px $orange;
+                        background-color: $orange;
+                        filter: opacity(0.75);
                     }
                 }
             }
+
+            .previewsContainerLarge.active {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                visibility: visible;
+
+                .desktopImageLarge {
+                    z-index: 3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: auto;
+                    height: 25em;
+                    z-index: 4;
+                }
+
+                .previewsLarge {
+                    z-index: 3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: auto;
+                    height: 20em;
+                    z-index: 4;
+                    height: auto;
+                }
+            }
+        }
                 
             .descriptionContainer {
                 padding: 0 5% 0 5%;
@@ -609,5 +643,4 @@
         top:0;
         z-index: 1;
         transition: 0.5s all;
-    }
 }

@@ -159,14 +159,54 @@ imageFour.addEventListener('click', function(){
 
 
 // image zoom 
-const carouselContainer = document.querySelector('.imageContainer');
+const previewContainer = document.querySelector('.previewsContainerLarge');
+const imageOnePreview = document.querySelector('.imageOne');
+const imageTwoPreview = document.querySelector('.imageTwo');
+const imageThreePreview = document.querySelector('.imageThree');
+const imageFourPreview = document.querySelector('.imageFour');
+const mainImagePreview = document.querySelector('.desktopImageLarge');
+
 
 mainImage.addEventListener('click', function(){
-    carouselContainer.classList.add('active');
+    previewContainer.classList.add('active');
     backdrop.classList.add('active');
 });
 
 backdrop.addEventListener('click', function(){
-    carouselContainer.classList.remove('active');
+    previewContainer.classList.remove('active');
     backdrop.classList.remove('active');
 });
+
+imageOnePreview.addEventListener('click', function(){
+    imageOnePreview.classList.add('active');
+    imageTwoPreview.classList.remove('active');
+    imageThreePreview.classList.remove('active');
+    imageFourPreview.classList.remove('active');
+    mainImagePreview.src = 'images/image-product-1.jpg';
+});
+
+imageTwoPreview.addEventListener('click', function(){
+    imageTwoPreview.classList.add('active');
+    imageOnePreview.classList.remove('active');
+    imageThreePreview.classList.remove('active');
+    imageFourPreview.classList.remove('active');
+    mainImagePreview.src = 'images/image-product-2.jpg';
+});
+
+imageThreePreview.addEventListener('click', function(){
+    imageThreePreview.classList.add('active');
+    imageOnePreview.classList.remove('active');
+    imageTwoPreview.classList.remove('active');
+    imageFourPreview.classList.remove('active');
+    mainImagePreview.src = 'images/image-product-3.jpg';
+});
+
+imageFourPreview.addEventListener('click', function(){
+    imageFourPreview.classList.add('active');
+    imageOnePreview.classList.remove('active');
+    imageTwoPreview.classList.remove('active');
+    imageThreePreview.classList.remove('active');
+    mainImagePreview.src = 'images/image-product-4.jpg';
+});
+
+
