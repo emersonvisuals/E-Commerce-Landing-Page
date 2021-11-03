@@ -221,6 +221,60 @@ imageFourPreview.addEventListener('click', function(){
 });
 
 
+let array = [ 
+    {
+        imageSrc: "/images/image-product-1.jpg",
+    },
+    {
+        imageSrc: "images/image-product-2.jpg",
+    },
+    {
+        imageSrc: "images/image-product-3.jpg",
+    },
+    {
+        imageSrc: "images/image-product-4.jpg",
+    }
+];
+
+let newNumber = 0;
+
+
+
+right.addEventListener('click', function(){
+    newNumber++;
+    let rightValue = array[newNumber];
+    mainImagePreview.src = rightValue.imageSrc;
+
+    console.log(rightValue.imageSrc);
+
+    if (rightValue.imageSrc === "images/image-product-1.jpg") {
+        imageOnePreview.classList.add('active');
+        imageTwoPreview.classList.remove('active');
+        imageThreePreview.classList.remove('active');
+        imageFourPreview.classList.remove('active');
+    } else if (rightValue.imageSrc === "images/image-product-1.jpg") {
+        imageOnePreview.classList.remove('active');
+        imageTwoPreview.classList.add('active');
+        imageThreePreview.classList.remove('active');
+        imageFourPreview.classList.remove('active');
+    } else if (mainImagePreview.src === "/images/image-product-3.jpg") {
+        imageOnePreview.classList.remove('active');
+        imageTwoPreview.classList.remove('active');
+        imageThreePreview.classList.add('active');
+        imageFourPreview.classList.remove('active');
+    } else if (mainImagePreview.src === "/images/image-product-4.jpg") {
+        imageOnePreview.classList.remove('active');
+        imageTwoPreview.classList.remove('active');
+        imageThreePreview.classList.remove('active');
+        imageFourPreview.classList.add('active');
+    } else {
+        return
+    }
+});
+
+
+
+
 
 
 
