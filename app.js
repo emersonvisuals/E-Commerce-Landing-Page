@@ -252,17 +252,17 @@ right.addEventListener('click', function(){
         imageTwoPreview.classList.remove('active');
         imageThreePreview.classList.remove('active');
         imageFourPreview.classList.remove('active');
-    } else if (rightValue.imageSrc === "images/image-product-1.jpg") {
+    } else if (rightValue.imageSrc === "images/image-product-2.jpg") {
         imageOnePreview.classList.remove('active');
         imageTwoPreview.classList.add('active');
         imageThreePreview.classList.remove('active');
         imageFourPreview.classList.remove('active');
-    } else if (mainImagePreview.src === "/images/image-product-3.jpg") {
+    } else if (rightValue.imageSrc === "images/image-product-3.jpg") {
         imageOnePreview.classList.remove('active');
         imageTwoPreview.classList.remove('active');
         imageThreePreview.classList.add('active');
         imageFourPreview.classList.remove('active');
-    } else if (mainImagePreview.src === "/images/image-product-4.jpg") {
+    } else if (rightValue.imageSrc === "images/image-product-4.jpg") {
         imageOnePreview.classList.remove('active');
         imageTwoPreview.classList.remove('active');
         imageThreePreview.classList.remove('active');
