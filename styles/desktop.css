@@ -528,6 +528,9 @@
     -webkit-transform: translateY(225px);
             transform: translateY(225px);
   }
+  section .sectionContent .previewsContainerLarge.active .arrows .arrowLeft.remove {
+    visibility: hidden;
+  }
   section .sectionContent .previewsContainerLarge.active .arrows .arrowRight {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -547,6 +550,9 @@
     border-radius: 2em;
     -webkit-transform: translateY(225px);
             transform: translateY(225px);
+  }
+  section .sectionContent .previewsContainerLarge.active .arrows .arrowRight.remove {
+    visibility: hidden;
   }
   section .sectionContent .previewsContainerLarge.active .desktopImageLarge {
     z-index: 3;

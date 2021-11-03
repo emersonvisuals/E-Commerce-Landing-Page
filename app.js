@@ -165,11 +165,14 @@ const imageTwoPreview = document.querySelector('.imageTwo');
 const imageThreePreview = document.querySelector('.imageThree');
 const imageFourPreview = document.querySelector('.imageFour');
 const mainImagePreview = document.querySelector('.desktopImageLarge');
+const left = document.querySelector('div.arrowLeft');
+const right = document.querySelector('div.arrowRight');
 
 
 mainImage.addEventListener('click', function(){
     previewContainer.classList.add('active');
     backdrop.classList.add('active');
+    left.classList.add('remove');
 });
 
 backdrop.addEventListener('click', function(){
@@ -183,6 +186,8 @@ imageOnePreview.addEventListener('click', function(){
     imageThreePreview.classList.remove('active');
     imageFourPreview.classList.remove('active');
     mainImagePreview.src = 'images/image-product-1.jpg';
+    left.classList.add('remove');
+    right.classList.remove('remove');
 });
 
 imageTwoPreview.addEventListener('click', function(){
@@ -191,6 +196,8 @@ imageTwoPreview.addEventListener('click', function(){
     imageThreePreview.classList.remove('active');
     imageFourPreview.classList.remove('active');
     mainImagePreview.src = 'images/image-product-2.jpg';
+    left.classList.remove('remove');
+    right.classList.remove('remove');
 });
 
 imageThreePreview.addEventListener('click', function(){
@@ -199,6 +206,8 @@ imageThreePreview.addEventListener('click', function(){
     imageTwoPreview.classList.remove('active');
     imageFourPreview.classList.remove('active');
     mainImagePreview.src = 'images/image-product-3.jpg';
+    left.classList.remove('remove');
+    right.classList.remove('remove');
 });
 
 imageFourPreview.addEventListener('click', function(){
@@ -207,6 +216,90 @@ imageFourPreview.addEventListener('click', function(){
     imageTwoPreview.classList.remove('active');
     imageThreePreview.classList.remove('active');
     mainImagePreview.src = 'images/image-product-4.jpg';
+    right.classList.add('remove');
+    left.classList.remove('remove');
 });
 
+
+
+
+
+/*
+const left = document.querySelector('div.arrowLeft');
+const right = document.querySelector('div.arrowRight');
+let array = [ 
+    {
+        imageSrc: "/images/image-product-1.jpg",
+        preview: "active"
+    },
+    {
+        imageSrc: "images/image-product-2.jpg",
+        preview:"active"
+    },
+    {
+        imageSrc: "images/image-product-3.jpg",
+        preview:"active"
+    },
+    {
+        imageSrc: "images/image-product-4.jpg",
+        preview:"active"
+    }
+];
+*/
+
+/*
+let leftNumber = 0;
+let rightNumber = 0;
+
+
+left.addEventListener('click', function(){
+    console.log('clicked left');
+    const leftItem = array[leftNumber];
+    leftNumber--;
+    if (leftNumber < 0) {
+        leftNumber = 3;
+    }
+    console.log(`I am number ${leftNumber}`);
+    mainImagePreview.src = leftItem.imageSrc;
+});
+
+right.addEventListener('click', function(){
+    console.log('clicked left');
+    const rightItem = array[rightNumber];
+    rightNumber++;
+    if (rightNumber > array.length - 1) {
+        rightNumber = 0;
+    }
+    console.log(`I am number ${rightNumber}`);
+    mainImagePreview.src = rightItem.imageSrc;
+});
+
+
+
+function previewChange() {
+    if (mainImagePreview.src === 'images/image-product-1.jpg') {
+        imageOnePreview.classList.add('active');
+        imageTwoPreview.classList.remove('active');
+        imageThreePreview.classList.remove('active');
+        imageFourPreview.classList.remove('active');
+    } else if (mainImagePreview.src === 'images/image-product-2.jpg'){
+        imageOnePreview.classList.remove('active');
+        imageTwoPreview.classList.add('active');
+        imageThreePreview.classList.remove('active');
+        imageFourPreview.classList.remove('active');
+    } else if (mainImagePreview.src === 'images/image-product-3.jpg') {
+        imageOnePreview.classList.remove('active');
+        imageTwoPreview.classList.remove('active');
+        imageThreePreview.classList.add('active');
+        imageFourPreview.classList.remove('active');
+    } else {
+        imageOnePreview.classList.remove('active');
+        imageTwoPreview.classList.remove('active');
+        imageThreePreview.classList.remove('active');
+        imageFourPreview.classList.add('active');
+    }
+}
+
+previewChange();
+*/
 
