@@ -527,6 +527,7 @@
     border-radius: 2em;
     -webkit-transform: translateY(225px);
             transform: translateY(225px);
+    cursor: pointer;
   }
   section .sectionContent .previewsContainerLarge.active .arrows .arrowLeft.remove {
     visibility: hidden;
@@ -550,6 +551,7 @@
     border-radius: 2em;
     -webkit-transform: translateY(225px);
             transform: translateY(225px);
+    cursor: pointer;
   }
   section .sectionContent .previewsContainerLarge.active .arrows .arrowRight.remove {
     visibility: hidden;
@@ -755,7 +757,6 @@
   transition: 0.5s all;
   max-width: 100vw;
   max-height: 100vh;
-  cursor: pointer;
 }
 
 .backdrop.shoppingCart {

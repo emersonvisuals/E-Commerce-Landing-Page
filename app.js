@@ -167,59 +167,21 @@ const imageFourPreview = document.querySelector('.imageFour');
 const mainImagePreview = document.querySelector('.desktopImageLarge');
 const left = document.querySelector('div.arrowLeft');
 const right = document.querySelector('div.arrowRight');
+const imageOneActive = document.querySelector('.image01.active');
+const imageTwoActive = document.querySelector('.image02.active');
+const imageThreeActive = document.querySelector('.image03.active');
+const imageFourActive = document.querySelector('.image04.active');
 
 
 mainImage.addEventListener('click', function(){
     previewContainer.classList.add('active');
     backdrop.classList.add('active');
-    left.classList.add('remove');
 });
 
 backdrop.addEventListener('click', function(){
     previewContainer.classList.remove('active');
     backdrop.classList.remove('active');
 });
-
-imageOnePreview.addEventListener('click', function(){
-    imageOnePreview.classList.add('active');
-    imageTwoPreview.classList.remove('active');
-    imageThreePreview.classList.remove('active');
-    imageFourPreview.classList.remove('active');
-    mainImagePreview.src = 'images/image-product-1.jpg';
-    left.classList.add('remove');
-    right.classList.remove('remove');
-});
-
-imageTwoPreview.addEventListener('click', function(){
-    imageTwoPreview.classList.add('active');
-    imageOnePreview.classList.remove('active');
-    imageThreePreview.classList.remove('active');
-    imageFourPreview.classList.remove('active');
-    mainImagePreview.src = 'images/image-product-2.jpg';
-    left.classList.remove('remove');
-    right.classList.remove('remove');
-});
-
-imageThreePreview.addEventListener('click', function(){
-    imageThreePreview.classList.add('active');
-    imageOnePreview.classList.remove('active');
-    imageTwoPreview.classList.remove('active');
-    imageFourPreview.classList.remove('active');
-    mainImagePreview.src = 'images/image-product-3.jpg';
-    left.classList.remove('remove');
-    right.classList.remove('remove');
-});
-
-imageFourPreview.addEventListener('click', function(){
-    imageFourPreview.classList.add('active');
-    imageOnePreview.classList.remove('active');
-    imageTwoPreview.classList.remove('active');
-    imageThreePreview.classList.remove('active');
-    mainImagePreview.src = 'images/image-product-4.jpg';
-    right.classList.add('remove');
-    left.classList.remove('remove');
-});
-
 
 let array = [ 
     {
@@ -238,41 +200,134 @@ let array = [
 
 let newNumber = 0;
 
-
-
 right.addEventListener('click', function(){
     newNumber++;
+    if (newNumber > 3) {
+        newNumber = 0;
+    }
     let rightValue = array[newNumber];
     mainImagePreview.src = rightValue.imageSrc;
 
-    console.log(rightValue.imageSrc);
-
-    if (rightValue.imageSrc === "images/image-product-1.jpg") {
+    if (newNumber === 0) {
         imageOnePreview.classList.add('active');
         imageTwoPreview.classList.remove('active');
         imageThreePreview.classList.remove('active');
         imageFourPreview.classList.remove('active');
-    } else if (rightValue.imageSrc === "images/image-product-2.jpg") {
+        left.classList.remove('remove');
+        right.classList.remove('remove');
+
+    } else if (newNumber === 1) {
         imageOnePreview.classList.remove('active');
         imageTwoPreview.classList.add('active');
         imageThreePreview.classList.remove('active');
         imageFourPreview.classList.remove('active');
-    } else if (rightValue.imageSrc === "images/image-product-3.jpg") {
+        left.classList.remove('remove');
+        right.classList.remove('remove');
+    } else if (newNumber === 2) {
         imageOnePreview.classList.remove('active');
         imageTwoPreview.classList.remove('active');
         imageThreePreview.classList.add('active');
         imageFourPreview.classList.remove('active');
-    } else if (rightValue.imageSrc === "images/image-product-4.jpg") {
+        left.classList.remove('remove');
+        right.classList.remove('remove');
+    } else if (newNumber === 3) {
         imageOnePreview.classList.remove('active');
         imageTwoPreview.classList.remove('active');
         imageThreePreview.classList.remove('active');
         imageFourPreview.classList.add('active');
+        left.classList.remove('remove');
+        right.classList.remove('remove');
     } else {
         return
     }
 });
 
 
+
+left.addEventListener('click', function(){
+    newNumber--;
+    if (newNumber < 0) {
+        newNumber = 3;
+    }
+    let leftValue = array[newNumber];
+    mainImagePreview.src = leftValue.imageSrc;
+
+    if (newNumber === 0) {
+        imageOnePreview.classList.add('active');
+        imageTwoPreview.classList.remove('active');
+        imageThreePreview.classList.remove('active');
+        imageFourPreview.classList.remove('active');
+        left.classList.remove('remove');
+        right.classList.remove('remove');
+
+    } else if (newNumber === 1) {
+        imageOnePreview.classList.remove('active');
+        imageTwoPreview.classList.add('active');
+        imageThreePreview.classList.remove('active');
+        imageFourPreview.classList.remove('active');
+        left.classList.remove('remove');
+        right.classList.remove('remove');
+    } else if (newNumber === 2) {
+        imageOnePreview.classList.remove('active');
+        imageTwoPreview.classList.remove('active');
+        imageThreePreview.classList.add('active');
+        imageFourPreview.classList.remove('active');
+        left.classList.remove('remove');
+        right.classList.remove('remove');
+    } else if (newNumber === 3) {
+        imageOnePreview.classList.remove('active');
+        imageTwoPreview.classList.remove('active');
+        imageThreePreview.classList.remove('active');
+        imageFourPreview.classList.add('active');
+        left.classList.remove('remove');
+        right.classList.remove('remove');
+    } else {
+        return
+    }
+});
+
+imageOnePreview.addEventListener('click', function(){
+    mainImagePreview.src = "images/image-product-1.jpg";
+    newNumber = 0;
+    imageOnePreview.classList.add('active');
+    imageTwoPreview.classList.remove('active');
+    imageThreePreview.classList.remove('active');
+    imageFourPreview.classList.remove('active');
+});
+
+
+imageTwoPreview.addEventListener('click', function(){
+    mainImagePreview.src = "images/image-product-2.jpg";
+    newNumber = 1;
+    imageOnePreview.classList.remove('active');
+    imageTwoPreview.classList.add('active');
+    imageThreePreview.classList.remove('active');
+    imageFourPreview.classList.remove('active');
+});
+
+imageThreePreview.addEventListener('click', function(){
+    mainImagePreview.src = "images/image-product-3.jpg";
+    newNumber = 2;
+    imageOnePreview.classList.remove('active');
+    imageTwoPreview.classList.remove('active');
+    imageThreePreview.classList.add('active');
+    imageFourPreview.classList.remove('active');
+});
+
+imageFourPreview.addEventListener('click', function(){
+    mainImagePreview.src = "images/image-product-4.jpg";
+    newNumber = 3;
+    imageOnePreview.classList.remove('active');
+    imageTwoPreview.classList.remove('active');
+    imageThreePreview.classList.remove('active');
+    imageFourPreview.classList.add('active');
+});
+
+function previouslyClicked() {
+    if (imageOneActive) {
+        
+    }
+}
 
 
 
