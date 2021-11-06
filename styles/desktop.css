@@ -432,6 +432,18 @@
     visibility: hidden;
     display: none;
   }
+  section .sectionContent .previewsContainerLarge .exitDesktop {
+    z-index: 10;
+    -webkit-filter: brightness(10);
+            filter: brightness(10);
+    position: absolute;
+    top: 0px;
+    margin: 0 0 0 23em;
+  }
+  section .sectionContent .previewsContainerLarge .exitDesktop img {
+    width: 20px;
+    height: 20px;
+  }
   section .sectionContent .previewsContainerLarge .previewsLarge {
     margin: 1em 0 0 0;
     display: -webkit-box;
@@ -443,6 +455,7 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    border-radius: 1em;
   }
   section .sectionContent .previewsContainerLarge .previewsLarge img {
     border: solid 3px transparent;
@@ -570,6 +583,7 @@
     width: auto;
     height: 25em;
     z-index: 4;
+    border-radius: 1em;
   }
   section .sectionContent .previewsContainerLarge.active .previewsLarge {
     z-index: 3;
