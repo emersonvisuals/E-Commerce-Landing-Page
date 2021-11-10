@@ -433,16 +433,18 @@
     display: none;
   }
   section .sectionContent .previewsContainerLarge .exitDesktop {
+    position: absolute;
     z-index: 10;
     -webkit-filter: brightness(10);
             filter: brightness(10);
     position: absolute;
-    top: 0px;
-    margin: 0 0 0 23em;
+    top: -50px;
+    margin: 0 0 0 28em;
   }
   section .sectionContent .previewsContainerLarge .exitDesktop img {
     width: 20px;
     height: 20px;
+    cursor: pointer;
   }
   section .sectionContent .previewsContainerLarge .previewsLarge {
     margin: 1em 0 0 0;
@@ -506,7 +508,7 @@
     visibility: visible;
     -webkit-transition: 0.5s all;
     transition: 0.5s all;
-    margin: 0 0 7em 0;
+    margin: 0 0 5em 0;
   }
   section .sectionContent .previewsContainerLarge.active .arrows {
     display: -webkit-box;
@@ -519,7 +521,9 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     z-index: 5;
-    width: 440px;
+    width: 530px;
+    position: absolute;
+    top: 0px;
   }
   section .sectionContent .previewsContainerLarge.active .arrows .arrowLeft {
     display: -webkit-box;
@@ -531,8 +535,8 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: #f7f8fd;
     background-repeat: no-repeat;
     background-position: center;
@@ -555,8 +559,8 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     background-color: #f7f8fd;
     background-repeat: no-repeat;
     background-position: center;
@@ -570,7 +574,6 @@
     visibility: hidden;
   }
   section .sectionContent .previewsContainerLarge.active .desktopImageLarge {
-    z-index: 3;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -581,22 +584,20 @@
         -ms-flex-pack: center;
             justify-content: center;
     width: auto;
-    height: 25em;
+    height: 30em;
     z-index: 4;
     border-radius: 1em;
   }
   section .sectionContent .previewsContainerLarge.active .previewsLarge {
-    z-index: 3;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: auto;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 32em;
     height: 20em;
     z-index: 4;
     height: auto;
@@ -632,6 +633,10 @@
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   section .priceContainer .cost .discount {
     display: -webkit-box;
@@ -668,7 +673,23 @@
     color: #b6bcc8;
     text-decoration: line-through;
   }
-  section .buttonContainer {
+  section .pricingContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
+  section .pricingContainer .buttonContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -678,27 +699,31 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: 1em 0 0 0;
-    padding: 0.5em;
     background-color: #f7f8fd;
-    border-radius: 0.5em;
+    border-radius: 0.75em;
+    width: 90%;
+    margin: 1em 0 0 0;
+    padding: 0;
+    height: 3.75em;
   }
-  section .buttonContainer .minus {
+  section .pricingContainer .buttonContainer .minus {
     position: relative;
     background-color: transparent;
     border: none;
+    left: 70px;
   }
-  section .buttonContainer span {
+  section .pricingContainer .buttonContainer span {
     font-family: "Kumbh Sans";
     font-weight: 700;
     font-size: 1.25em;
   }
-  section .buttonContainer .plus {
+  section .pricingContainer .buttonContainer .plus {
     position: relative;
     background-color: transparent;
     border: none;
+    right: 70px;
   }
-  section .addToCartContainer {
+  section .pricingContainer .addToCartContainer {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -708,9 +733,10 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 1em 0 3em 0;
+    margin: 1em 0 0 0;
+    width: 90%;
   }
-  section .addToCartContainer .addToCart {
+  section .pricingContainer .addToCartContainer .addToCart {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -720,20 +746,20 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 100vw;
+    width: 90%;
     padding: 1em;
     background-color: #ff7d1a;
     border: none;
-    border-radius: 0.25em;
+    border-radius: 0.75em;
     -webkit-box-shadow: 0px 10px 30px 2px rgba(255, 176, 176, 0.5);
             box-shadow: 0px 10px 30px 2px rgba(255, 176, 176, 0.5);
   }
-  section .addToCartContainer .addToCart img {
+  section .pricingContainer .addToCartContainer .addToCart img {
     padding: 0 1em 0 0;
     -webkit-filter: brightness(2000%);
             filter: brightness(2000%);
   }
-  section .addToCartContainer .addToCart p {
+  section .pricingContainer .addToCartContainer .addToCart p {
     margin: 0.1em 0 0 0;
     color: white;
     font-family: "Kumbh Sans";

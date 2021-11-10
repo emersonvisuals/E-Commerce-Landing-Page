@@ -401,15 +401,17 @@
                 display: none;
 
                 .exitDesktop {
+                    position: absolute;
                     z-index: 10;
                     filter: brightness(10);
                     position: absolute;
-                    top:0px;
-                    margin: 0 0 0 23em;
+                    top:-50px;
+                    margin: 0 0 0 28em;
 
                     img {
                         width: 20px;
                         height: 20px;
+                        cursor: pointer;
                     }
                 }
 
@@ -460,21 +462,23 @@
                 align-items: center;
                 visibility: visible;
                 transition: 0.5s all;
-                margin: 0 0 7em 0;
+                margin: 0 0 5em 0;
 
                 .arrows {
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
                     z-index: 5;
-                    width: 440px;
+                    width: 530px;
+                    position: absolute;
+                    top:0px;
 
                     .arrowLeft {
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        width: 40px;
-                        height: 40px;
+                        width: 50px;
+                        height: 50px;
                         background-color: $lightGrayishBlue;
                         background-repeat: no-repeat;
                         background-position: center;
@@ -492,8 +496,8 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        width: 40px;
-                        height: 40px;
+                        width: 50px;
+                        height: 50px;
                         background-color: $lightGrayishBlue;
                         background-repeat: no-repeat;
                         background-position: center;
@@ -509,23 +513,21 @@
                 }
 
                 .desktopImageLarge {
-                    z-index: 3;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     width: auto;
-                    height: 25em;
+                    height: 30em;
                     z-index: 4;
                     border-radius: 1em;
                     
                 }
 
                 .previewsLarge {
-                    z-index: 3;
                     display: flex;
                     align-items: center;
-                    justify-content: center;
-                    width: auto;
+                    justify-content: space-around;
+                    width: 32em;
                     height: 20em;
                     z-index: 4;
                     height: auto;
@@ -567,6 +569,7 @@
                 .cost {
                     display: flex;
                     justify-content: space-between;
+                    flex-direction: column;
         
                     .discount {
                         display: flex;
@@ -601,63 +604,80 @@
                     }
                 }
             }
-        
-            .buttonContainer {
+
+            .pricingContainer {
                 display: flex;
-                justify-content: center;
-                align-items: center;
-                margin: 1em 0 0 0;
-                padding: 0.5em;
-                background-color: $lightGrayishBlue;
-                border-radius:0.5em;
-        
-                .minus {
-                    position:relative;
-                    background-color: transparent;
-                    border: none;
+                align-items:center;
+                justify-content: space-around;
+                flex-direction: row;
+                margin: 0;
+                padding: 0;
+                    
+                .buttonContainer {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $lightGrayishBlue;
+                    border-radius:0.75em;
+                    width: 90%;
+                    margin: 1em 0 0 0;
+                    padding: 0;
+                    height: 3.75em;
+                        
+            
+                    .minus {
+                        position:relative;
+                        background-color: transparent;
+                        border: none;
+                        left: 70px;
+                    }
+            
+                    span {
+                        font-family: $fontFamily;
+                        font-weight: 700;
+                        font-size: 1.25em;
+                    }
+            
+                    .plus {
+                        position: relative;
+                        background-color: transparent;
+                        border: none;
+                        right: 70px;
+                    }
                 }
-        
-                span {
-                    font-family: $fontFamily;
-                    font-weight: 700;
-                    font-size: 1.25em;
-                }
-        
-                .plus {
-                    position: relative;
-                    background-color: transparent;
-                    border: none;
-                }
-            }
-        
-            .addToCartContainer {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 1em 0 3em 0;
-        
-                .addToCart {
+
+                
+                .addToCartContainer {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 100vw;
-                    padding: 1em;
-                    background-color: $orange;
-                    border:none;
-                    border-radius: 0.25em;
-                    box-shadow: 0px 10px 30px 2px rgba(255,176,176,0.5);
-                    
-                    img {
-                        padding: 0 1em 0 0;
-                        filter: brightness(2000%);
-                    }
-        
-                    p {
-                        margin: 0.1em 0 0 0;
-                        color:$white;
-                        font-family: $fontFamily;
-                        font-size: 1em;
-                        font-weight: 700;
+                    margin: 1em 0 0 0;
+                    width: 90%;
+
+            
+                    .addToCart {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 90%;
+                        padding: 1em;
+                        background-color: $orange;
+                        border:none;
+                        border-radius:0.75em;
+                        box-shadow: 0px 10px 30px 2px rgba(255,176,176,0.5);
+                        
+                        img {
+                            padding: 0 1em 0 0;
+                            filter: brightness(2000%);
+                        }
+            
+                        p {
+                            margin: 0.1em 0 0 0;
+                            color:$white;
+                            font-family: $fontFamily;
+                            font-size: 1em;
+                            font-weight: 700;
+                        }
                     }
                 }
             }
