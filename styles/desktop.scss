@@ -536,7 +536,7 @@
         }
                 
             .descriptionContainer {
-                padding: 0 5% 0 5%;
+                padding: 0 5% 0 10%;
                 width: 50vw;
                 
                 .description {
@@ -547,18 +547,21 @@
                         font-size: 1em;
                         font-family: $fontFamily;
                         font-weight: 700;
+                        padding: 0.25em 0;
                     }
         
                     h2 {
-                        font-size: 2em;
+                        font-size: 2.5em;
                         font-family: $fontFamily;
                         font-weight: 700;
                         color: $black;
+                        padding: 0.25em 0;
                     }
         
                     p {
                         font-family: $fontFamily;
                         color: $darkGrayishBlue;
+                        padding: 0.25em 0;
                     }
                 }
             }
@@ -578,6 +581,7 @@
                         h1 {
                             font-family: $fontFamily;
                             font-weight: 700;
+                            font-size: 2em;
                         }
         
                         h2 {
@@ -619,7 +623,7 @@
                     align-items: center;
                     background-color: $lightGrayishBlue;
                     border-radius:0.75em;
-                    width: 90%;
+                    width: 60%;
                     margin: 1em 0 0 0;
                     padding: 0;
                     height: 3.75em;

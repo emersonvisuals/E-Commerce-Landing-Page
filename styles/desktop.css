@@ -603,7 +603,7 @@
     height: auto;
   }
   section .descriptionContainer {
-    padding: 0 5% 0 5%;
+    padding: 0 5% 0 10%;
     width: 50vw;
   }
   section .descriptionContainer .description h1 {
@@ -612,16 +612,19 @@
     font-size: 1em;
     font-family: "Kumbh Sans";
     font-weight: 700;
+    padding: 0.25em 0;
   }
   section .descriptionContainer .description h2 {
-    font-size: 2em;
+    font-size: 2.5em;
     font-family: "Kumbh Sans";
     font-weight: 700;
     color: black;
+    padding: 0.25em 0;
   }
   section .descriptionContainer .description p {
     font-family: "Kumbh Sans";
     color: #68707d;
+    padding: 0.25em 0;
   }
   section .priceContainer {
     margin: 1em 0 0 0;
@@ -649,6 +652,7 @@
   section .priceContainer .cost .discount h1 {
     font-family: "Kumbh Sans";
     font-weight: 700;
+    font-size: 2em;
   }
   section .priceContainer .cost .discount h2 {
     background-color: #ffede0;
@@ -701,7 +705,7 @@
             align-items: center;
     background-color: #f7f8fd;
     border-radius: 0.75em;
-    width: 90%;
+    width: 60%;
     margin: 1em 0 0 0;
     padding: 0;
     height: 3.75em;
