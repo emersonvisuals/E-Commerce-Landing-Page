@@ -421,14 +421,14 @@ section .buttonContainer span {
   font-size: 1.25em;
 }
 
-section .buttonContainer .plus {
+section .buttonContainer span .plus {
   position: absolute;
   background-color: transparent;
   border: none;
   right: 100px;
 }
 
-.addToCartContainer {
+section .addToCartContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -441,7 +441,7 @@ section .buttonContainer .plus {
   margin: 1em 0 3em 0;
 }
 
-.addToCartContainer .addToCart {
+section .addToCartContainer .addToCart {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,13 +460,13 @@ section .buttonContainer .plus {
           box-shadow: 0px 10px 30px 2px rgba(255, 176, 176, 0.5);
 }
 
-.addToCartContainer .addToCart img {
+section .addToCartContainer .addToCart img {
   padding: 0 1em 0 0;
   -webkit-filter: brightness(2000%);
           filter: brightness(2000%);
 }
 
-.addToCartContainer .addToCart p {
+section .addToCartContainer .addToCart p {
   margin: 0.1em 0 0 0;
   color: white;
   font-family: "Kumbh Sans";
@@ -474,7 +474,7 @@ section .buttonContainer .plus {
   font-weight: 700;
 }
 
-.backdrop {
+section .addToCartContainer .backdrop {
   visibility: hidden;
   position: absolute;
   content: '';
@@ -489,7 +489,7 @@ section .buttonContainer .plus {
   transition: 0.5s all;
 }
 
-.backdrop.active {
+section .addToCartContainer .backdrop.active {
   visibility: visible;
   position: absolute;
   content: '';
@@ -503,7 +503,7 @@ section .buttonContainer .plus {
   transition: 0.5s all;
 }
 
-.backdrop.shoppingCart {
+section .addToCartContainer .backdrop.shoppingCart {
   visibility: visible;
   position: absolute;
   content: '';
@@ -517,7 +517,7 @@ section .buttonContainer .plus {
   transition: 0.5s all;
 }
 
-.previewsContainerLarge {
+section .addToCartContainer .previewsContainerLarge {
   visibility: hidden;
   display: none;
 }
