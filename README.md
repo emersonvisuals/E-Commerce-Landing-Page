@@ -12,12 +12,14 @@ Here is the link to the live website! https://emersonvisuals-ecommerce-page.netl
 
 ## Socials! 🌎
 
-@emersonvisuals TikTok
-
 @emersonvisuals Instagram
+
+@emersonvisuals Facebook
 
 @emersonvisuals Youtube
 
 @emersonvisuals GitHub
+
+@emersonvisuals TikTok
 
 NOTE: Personal Portfolio website of UX/UI and Frontend Development projects coming soon!

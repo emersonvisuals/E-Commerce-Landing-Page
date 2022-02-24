@@ -265,6 +265,52 @@ section {
         transition: 0.5s all;
     }
 
+        
+    .backdrop {
+        visibility: hidden;
+        position: absolute;
+        content: '';
+        width:100%;
+        height: 100%;
+        overflow: hidden;
+        background-color: transparent;
+        opacity: 0;
+        top:0;
+        z-index: 2;
+        transition: 0.5s all;
+    }
+
+    .backdrop.active {
+        visibility: visible;
+        position: absolute;
+        content: '';
+        width:100vw;
+        max-height: 100vh;
+        background-color: $black;
+        opacity: 0.5;
+        top:0;
+        z-index: 1;
+        transition: 0.5s all;
+    }
+
+    .backdrop.shoppingCart {
+        visibility: visible;
+        position: absolute;
+        content: '';
+        width:100%;
+        height: 100%;
+        background-color: transparent;
+        opacity: 0.5;
+        top:0;
+        z-index: 1;
+        transition: 0.5s all;
+    }
+
+    .previewsContainerLarge {
+        visibility: hidden;
+        display: none;
+    }
+
     .descriptionContainer {
         padding: 1.25em;
 
@@ -353,16 +399,15 @@ section {
             font-family: $fontFamily;
             font-weight: 700;
             font-size: 1.25em;
-        
-
-        .plus {
-            position: absolute;
-            background-color: transparent;
-            border: none;
-            right: 100px;
         }
+
     }
 
+    .plus {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        right: 100px;
     }
 
     .addToCartContainer {
@@ -395,51 +440,7 @@ section {
                 font-weight: 700;
             
         }
+    }
+}
 }
 
-.backdrop {
-    visibility: hidden;
-    position: absolute;
-    content: '';
-    width:100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: transparent;
-    opacity: 0;
-    top:0;
-    z-index: 2;
-    transition: 0.5s all;
-}
-
-.backdrop.active {
-    visibility: visible;
-    position: absolute;
-    content: '';
-    width:100vw;
-    max-height: 100vh;
-    background-color: $black;
-    opacity: 0.5;
-    top:0;
-    z-index: 1;
-    transition: 0.5s all;
-}
-
-.backdrop.shoppingCart {
-    visibility: visible;
-    position: absolute;
-    content: '';
-    width:100%;
-    height: 100%;
-    background-color: transparent;
-    opacity: 0.5;
-    top:0;
-    z-index: 1;
-    transition: 0.5s all;
-}
-
-.previewsContainerLarge {
-    visibility: hidden;
-    display: none;
-}
-}
-}
